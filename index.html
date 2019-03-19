@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery</title>
+
+    <style>
+        .circle {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            display: inline-block;
+            padding: 2em ;
+            color: black;
+            margin: 2em;
+            display: none;
+            place-content: center;
+        }
+
+        .green {
+            background: #24a45b;
+        }
+        .blue {
+            background: #2440a4;
+        }
+        .purple {
+            background: #5b24a4;
+        }
+        .tomato {
+            background: tomato;
+        }
+        .yellow {
+            background: yellow;
+        }
+        .brown {
+            background: brown;
+        }
+
+        button {
+            border: none;
+            background: #24a48d;
+            border-radius: .8em;
+            padding: 1em ;
+            outline: none;
+            width: fit-content;
+            display: block;
+            margin: 1em 0;
+        }
+
+        .total {
+            height: 18px;
+            color: white;
+            font-family: sans-serif;
+            width: 18px;
+            border-radius: 50%;
+            display: grid;
+            place-content: center;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cumque totam maiores ut, modi nam delectus recusandae voluptates mollitia facere hic dolor, perferendis quis. Aperiam dolorem sit assumenda amet praesentium.</p>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, harum!</p>
+
+    <p>not working </p>
+
+    <!-- <button>
+        Click Me To Fade In Circles
+    </button>
+    
+
+    <div class="circle green"></div>
+    <div class="circle blue"></div>
+    <div class="circle yellow"></div>
+    <div class="circle purple"></div>
+    <div class="circle tomato"></div>
+    <div class="circle brown"></div> -->
+
+    -------------------------------------
+
+
+    <div class="total"></div>
+    <br/>
+    <button class="addbtn">Add To Cart</button>
+    <button class="remove">Remove From Cart</button>
+
+
+    <script src="js/jquery.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+    <script>
+        // $(document).ready(function(){
+        // $("button").click(function(){
+        //     $(".circle").css("display", "grid");
+        //     $(".green").fadeIn(100);
+        //     $(".blue").fadeIn(200);
+        //     $(".yellow").fadeIn(300);
+        //     $(".purple").fadeIn(400);
+        //     $(".tomato").fadeIn(500);
+        //     $(".brown").fadeIn(600);
+        //     $(".circle").animate( {
+        //         height : '20px',
+        //         width : '20px',
+        //         left : '+\200px'
+        //     });
+        //     $(".circle").slideDown("fast");
+        //     $(".circle").append(1);
+        // });
+        // });
+
+        var counter = 0;
+    
+        $(document).ready(function() {
+    
+            $(".addbtn").click(function(){
+                counter++;
+    
+                $(".total").text(counter);
+                $(".total").css("background", "#666666");
+            });
+
+            $(".remove").click(function() {
+                counter--;
+
+                $(".total").text(counter);
+                $(".total").css("background", "#24a49d");
+            })
+        });
+    
+    </script>
+</body>
+</html>
